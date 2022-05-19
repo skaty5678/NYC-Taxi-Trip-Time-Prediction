@@ -32,7 +32,7 @@ connection to the server - Y=store and forward; N=not a store and forward trip
 
 trip_duration - duration of the trip in seconds
 
-##We ran 3 models on the given dataset:
+## We ran 3 models on the given dataset:
 1. Linear Regression.
 2. Random Forest.
 3. XGBoost.
