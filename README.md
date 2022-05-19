@@ -31,3 +31,8 @@ store_and_fwd_flag - This flag indicates whether the trip record was held in veh
 connection to the server - Y=store and forward; N=not a store and forward trip
 
 trip_duration - duration of the trip in seconds
+
+##We ran 3 models on the given dataset:
+1. Linear Regression.
+2. Random Forest.
+3. XGBoost.
