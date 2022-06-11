@@ -32,7 +32,31 @@ connection to the server - Y=store and forward; N=not a store and forward trip
 
 trip_duration - duration of the trip in seconds
 
+#
+
+Started with the exploratory data analysis of dependent and independent variables. Then  searched for correlation between the variables to scrutinize. Proceeding further applied  feature engineering and dimensionality reduction to extract valuable statistics like distance and  speed from the geo coordinates and pickup hour, day, weekday and month from pickup and drop off datetime. Used haversine to extract distance from latitudes and longitudes of  the given trip.  
+
+
+There were some important facts from the EDA like people generally like to travel alone. Most  number of pickups were done on Friday. Throughout the day between 5 PM to 9 PM the taxi  service had been availed the most number of times. 
+
+
+Pickups done between 2 PM to 6 PM has seen the longer trips. Taxis were booked for longer trips  generally on Thursdays and Fridays. A static increase in trip duration from February onwards maybe because of the reason that from then the weather became less cold and more suitable for travelling by taxi. 
+
+
+Majority of the trips were with distance less than 25 kms and time less than 3 to 4 hours which  indicates that people generally preferred to take cabs for not so long journeys. 
+
+
 ## We ran 3 models on the given dataset:
 1. Linear Regression.
 2. Random Forest.
 3. XGBoost.
+
+
+Linear regression didn’t perform well because there was no linear relationship between the  target variable and some of the independent variables. Next, tried random forest regressor  with some hyperparameter tuning and RMSE value was 0.32 and R2 score being 80%. And  finally, tried the XGBoost regressor which gave even better results than both the previous  ones with some hyperparameter tuning. 
+
+
+Also plotted the feature importance for both the tree-based algorithms and distance played a  major role in both the models with more than 65% significance for the prediction. 
+
+
+So, finally proceeded with the XGBoost model and were able to predict for 83% of the data with RMSE  of 0.29.
+
